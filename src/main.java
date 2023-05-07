@@ -72,5 +72,5 @@ public class main {
         }
         }while (opcion!=0);
     }
-    
+
 }
