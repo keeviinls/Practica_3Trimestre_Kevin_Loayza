@@ -10,7 +10,7 @@ public class Peliculas implements PeliculasInterface{
 
     static {
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/practica3", "root", "Noteloesperas1");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/practica3", "root", "admin");
 
         }catch (SQLException e){
             throw new RuntimeException(e);
@@ -33,10 +33,9 @@ public class Peliculas implements PeliculasInterface{
 
         }
 
-        System.out.println(listado_peliculas.toString());
 
 
-        return null;
+        return listado_peliculas;
     }
 
     public ArrayList<Pelicula> buscarTodo() throws SQLException{
@@ -56,9 +55,11 @@ public class Peliculas implements PeliculasInterface{
 
         }
 
-        System.out.println(listado_peliculas.toString());
 
-        return null;
+        /*
+        lo que tenia printl, lo ponemos main
+         */
+        return listado_peliculas;
     }
 
 
@@ -71,6 +72,12 @@ public class Peliculas implements PeliculasInterface{
             System.out.println("ID: "+rs.getInt(1) + "TITULO: "+rs.getString(2)+
             " GENERO: "+rs.getString(3) + "ESTRENO "+ rs.getInt(4));
         }
+
+
+        /**
+         * CREAMOS UN OBJETO QUE METAQ LO DE ARRIBA, LO DE WHILE .....
+         * EL OBJETO TIENE QUE TENER EL CONTENIDO DEL WHILE ESE, LUEGO EL RETURN TIENE QUE DEVOLVER ESE OBJETO
+         */
 
         return null;
     }

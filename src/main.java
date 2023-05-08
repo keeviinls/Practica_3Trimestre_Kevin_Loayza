@@ -60,7 +60,11 @@ public class main {
 
                 System.out.println("Dime el id de la pelicula y te mostrare informacion sobre ella");
                 id = sc.nextInt();
-                peliculas.buscarPelicula(id);break;
+                peliculas.buscarPelicula(id);
+                /**
+                 * FALTA SOUTPRINT, QUE YA ESTABA EN LA CLASE PELICULAS, ASI CON LAS 3 OPCIONES FINALES
+                 */
+                break;
 
             case 6:
                 peliculas.buscarTodo();break;
